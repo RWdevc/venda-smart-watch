@@ -1,0 +1,2002 @@
+<!doctype html>
+<html className="dark" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#343538",
+              "on-background": "#e3e2e6",
+              "surface-bright": "#38393d",
+              "tertiary-fixed-dim": "#ffb3b2",
+              "on-secondary-container": "#00566a",
+              "on-tertiary-fixed-variant": "#92001f",
+              "surface-container-high": "#292a2d",
+              "tertiary-fixed": "#ffdad9",
+              "on-primary-fixed": "#002111",
+              "on-surface-variant": "#b9cbbd",
+              "on-tertiary-fixed": "#410008",
+              "on-secondary-fixed-variant": "#004e60",
+              "surface-tint": "#00e293",
+              "surface-container-low": "#1b1b1f",
+              "on-tertiary": "#680013",
+              background: "#121316",
+              "inverse-surface": "#e3e2e6",
+              "on-primary-fixed-variant": "#005232",
+              "primary-container": "#00f5a0",
+              "primary-fixed-dim": "#00e293",
+              "on-tertiary-container": "#bc002b",
+              "secondary-fixed": "#b6ebff",
+              "on-error": "#690005",
+              "surface-dim": "#121316",
+              secondary: "#a5e7ff",
+              primary: "#cdffde",
+              "on-error-container": "#ffdad6",
+              "on-surface": "#e3e2e6",
+              "surface-container": "#1f1f23",
+              "on-primary": "#003921",
+              tertiary: "#fff0ef",
+              "surface-container-lowest": "#0d0e11",
+              error: "#ffb4ab",
+              "error-container": "#93000a",
+              "on-primary-container": "#006b43",
+              surface: "#121316",
+              outline: "#849588",
+              "outline-variant": "#3b4a40",
+              "secondary-container": "#00d2ff",
+              "inverse-primary": "#006c44",
+              "primary-fixed": "#50ffaf",
+              "secondary-fixed-dim": "#47d6ff",
+              "tertiary-container": "#ffcac9",
+              "on-secondary-fixed": "#001f28",
+              "surface-container-highest": "#343538",
+              "on-secondary": "#003543",
+              "inverse-on-surface": "#2f3034",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "space-3xl": "6rem",
+              "space-xl": "2.5rem",
+              "gutter-sm": "0.75rem",
+              "gutter-lg": "2rem",
+              "space-lg": "1.5rem",
+              "margin-desktop": "3rem",
+              gutter: "1.5rem",
+              "space-md": "1rem",
+              "space-sm": "0.5rem",
+              "space-xs": "0.25rem",
+              "margin-mobile": "1rem",
+              "space-2xl": "4rem",
+              margin: "1.5rem",
+            },
+            fontFamily: {
+              "headline-md": ["Outfit"],
+              "label-numeric": ["Space Grotesk"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "headline-sm": ["Outfit"],
+              "headline-xl-mobile": ["Outfit"],
+              "headline-xl": ["Outfit"],
+              "body-xl": ["Plus Jakarta Sans"],
+              "label-badge": ["Space Grotesk"],
+              "display-hero-mobile": ["Outfit"],
+              "display-hero": ["Outfit"],
+              "headline-lg": ["Outfit"],
+              "label-micro": ["Space Grotesk"],
+              "body-md": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-numeric": [
+                "16px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+              "headline-sm": [
+                "20px",
+                { lineHeight: "28px", fontWeight: "600" },
+              ],
+              "headline-xl-mobile": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-xl": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-badge": [
+                "12px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.08em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-hero-mobile": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "label-micro": [
+                "10px",
+                {
+                  lineHeight: "12px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body className="bg-surface text-on-surface font-body-md antialiased">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.5)]"
+    >
+      <div
+        className="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-md"
+      >
+        <div className="flex items-center gap-space-md">
+          <div className="flex flex-col">
+            <div className="flex items-center gap-space-xs">
+              <span
+                className="text-headline-sm font-headline-sm tracking-tight text-on-surface uppercase"
+                >CHRONOS</span
+              ><span
+                className="text-headline-sm font-headline-sm tracking-tight text-primary-container font-extrabold uppercase"
+                >KINETIC</span
+              >
+            </div>
+            <span
+              className="text-label-micro font-label-micro uppercase tracking-widest text-on-surface-variant"
+              >TITANIUM EDITION / PULSE PRO</span
+            >
+          </div>
+          <div
+            className="hidden xl:flex items-center gap-space-xs bg-surface-container-high px-space-sm py-space-xs rounded-full"
+          >
+            <span
+              className="material-symbols-outlined text-primary-container text-[16px]"
+              >verified</span
+            ><span
+              className="text-label-micro font-label-micro text-primary uppercase"
+              >Frete Grátis &amp; Garantia Oficial</span
+            >
+          </div>
+        </div>
+        <nav
+          className="hidden lg:flex items-center gap-space-lg"
+          data-active-classes="text-primary-container font-semibold"
+        >
+          <a
+            className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="visao-geral"
+            href="#visao-geral"
+            >Visão Geral</a
+          ><a
+            className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="recursos"
+            href="#recursos"
+            >Recursos</a
+          ><a
+            className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="saude-e-bem-estar"
+            href="#saude-bem-estar"
+            >Saúde &amp; Bem-Estar</a
+          ><a
+            className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="ficha-tecnica"
+            href="#ficha-tecnica"
+            >Ficha Técnica</a
+          ><a
+            className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="avaliacoes"
+            href="#avaliacoes"
+            >Avaliações</a
+          ><a
+            className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="garantia-e-suporte"
+            href="#garantia"
+            >Garantia</a
+          >
+        </nav>
+        <div className="flex items-center gap-space-md">
+          <a
+            className="hidden sm:inline-flex items-center justify-center px-space-lg py-space-sm rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container font-headline-sm text-body-sm uppercase tracking-wider font-bold shadow-[0_0_20px_rgba(0,245,160,0.35)] hover:opacity-95 transition-transform active:scale-95"
+            href="#comprar"
+            >Comprar com Desconto</a
+          ><img
+            alt="Profile"
+            className="w-8 h-8 rounded-full object-cover ring-1 ring-surface-variant"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VSFOhFrszZjOsaUJoRomFS88EJUoyYV-K88QonFvEfijgdQUCwUL-W5v9trS8ixGi2W6svgNF2EURCZqXs8zArWNjkhAV-zb418-n1G2ptacjGxR9LsMSWkDAbFCm5pOryyIKdWmv8QvAsmLQMCQ8ruK4xDiUL83nWh84jRf69EfO0sjC4iEZj_RXVaffLTBaTNed8iDsHvq71ocJsw2pvqC17K-VRc_b76ayYCVnpcOYjwCbsnIkLKlZTvkYGTLxpYWOzsTYspQ"
+          />
+        </div>
+      </div>
+    </header>
+    <main className="w-full pt-20 bg-surface min-h-screen">
+      <div className="flex flex-col w-full text-on-surface">
+        
+        <div
+          className="w-full bg-surface-container-lowest border-b border-surface-container-high/40 py-2.5 px-margin-mobile"
+        >
+          <div
+            className="max-w-[1280px] mx-auto flex items-center justify-between text-body-sm font-body-sm"
+          >
+            <div className="flex items-center gap-space-sm">
+              <span
+                className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-semibold bg-surface-container-high text-primary"
+                ><span
+                  className="w-1.5 h-1.5 rounded-full bg-primary-container"
+                ></span>
+                Pronta Entrega</span
+              ><span className="text-on-surface-variant hidden sm:inline">•</span>
+              <p className="text-on-surface text-xs sm:text-body-sm">
+                Frete Expresso Grátis para todo o Brasil • Envio em até 24h
+                úteis
+              </p>
+            </div>
+            <div
+              className="flex items-center gap-space-xs text-xs text-on-surface-variant font-label-numeric font-medium"
+            >
+              <span
+                className="material-symbols-outlined text-[15px] text-primary-container"
+                >local_shipping</span
+              ><span className="">Rastreio Correios ativo</span>
+            </div>
+          </div>
+        </div>
+        
+        <section
+          className="relative w-full overflow-hidden pb-space-3xl pt-space-xl"
+          id="visao-geral"
+        >
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop py-space-xl lg:py-space-2xl"
+          >
+            <div
+              className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center"
+            >
+              <div className="lg:col-span-7 flex flex-col gap-space-md">
+                <div className="flex items-center gap-space-sm">
+                  <span
+                    className="text-label-badge font-label-badge uppercase tracking-wider text-primary px-space-sm py-1 rounded bg-surface-container-high font-semibold"
+                    >Linha 2025 • Titânio Aeroespacial</span
+                  >
+                  <div
+                    className="flex items-center gap-1 text-xs text-on-surface-variant"
+                  >
+                    <div className="flex text-[#ffb800]">
+                      <span
+                        className="material-symbols-outlined text-[15px]"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                        >star</span
+                      ><span
+                        className="material-symbols-outlined text-[15px]"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                        >star</span
+                      ><span
+                        className="material-symbols-outlined text-[15px]"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                        >star</span
+                      ><span
+                        className="material-symbols-outlined text-[15px]"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                        >star</span
+                      ><span
+                        className="material-symbols-outlined text-[15px]"
+                        style={{ fontVariationSettings: "'FILL' 1" }}
+                        >star</span
+                      >
+                    </div>
+                    <span className="font-medium text-on-surface">4.9</span
+                    ><span className="text-on-surface-variant"
+                      >(1.428 clientes no Brasil)</span
+                    >
+                  </div>
+                </div>
+                <h1
+                  className="text-display-hero-mobile md:text-display-hero font-display-hero text-on-surface font-extrabold tracking-tight leading-tight uppercase"
+                >
+                  Sua rotina, saúde e chamadas.<br /><span
+                    className="text-primary-container font-extrabold"
+                    >Tudo no seu pulso.</span
+                  >
+                </h1>
+                <p
+                  className="text-body-lg md:text-body-xl font-body-md text-on-surface-variant max-w-xl leading-relaxed"
+                >
+                  O smartwatch premium em titânio e tela AMOLED nítida sob o
+                  sol. Atenda chamadas sem tirar o telefone do bolso, acompanhe
+                  batimentos e sono, e tenha bateria para 7 dias sem
+                  preocupação.
+                </p>
+                <div
+                  className="bg-surface-container-low p-space-lg rounded-2xl border border-surface-container-high/60 flex flex-col gap-space-md shadow-lg"
+                >
+                  <div
+                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-surface-container-high/40"
+                  >
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-space-xs">
+                        <span
+                          className="text-body-sm font-body-sm text-on-surface-variant line-through font-label-numeric"
+                          >De R$ 289,00</span
+                        ><span
+                          className="text-label-micro font-label-micro bg-primary-container/10 text-primary px-space-xs py-0.5 rounded font-bold uppercase"
+                          >Economize R$ 102</span
+                        >
+                      </div>
+                      <div className="flex items-baseline gap-space-xs mt-1">
+                        <span
+                          className="text-headline-sm font-headline-sm text-on-surface-variant font-normal"
+                          >Por</span
+                        ><span
+                          className="text-headline-xl md:text-display-hero-mobile font-display-hero font-extrabold text-on-surface"
+                          >R$ 187<span className="text-headline-sm">,00</span></span
+                        ><span
+                          className="text-body-sm font-body-sm text-primary font-medium"
+                          >no Pix (5% off)</span
+                        >
+                      </div>
+                      <p
+                        className="text-label-micro font-label-micro text-on-surface-variant mt-0.5"
+                      >
+                        ou até 12x de R$ 18,77 em qualquer cartão de crédito
+                      </p>
+                    </div>
+                    <div
+                      className="flex flex-col gap-1 text-xs text-on-surface-variant"
+                    >
+                      <span
+                        className="flex items-center gap-1.5 text-on-surface font-medium"
+                        ><span
+                          className="material-symbols-outlined text-[16px] text-primary"
+                          >check_circle</span
+                        >
+                        2 pulseiras inclusas (Aço + Silicone)</span
+                      ><span className="flex items-center gap-1.5"
+                        ><span
+                          className="material-symbols-outlined text-[16px] text-primary"
+                          >verified_user</span
+                        >
+                        30 dias para testar sem risco</span
+                      ><span className="flex items-center gap-1.5"
+                        ><span
+                          className="material-symbols-outlined text-[16px] text-primary"
+                          >local_shipping</span
+                        >
+                        Frete Grátis com Rastreio</span
+                      >
+                    </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-space-md">
+                    <a
+                      className="flex-1 inline-flex items-center justify-center gap-space-sm py-3.5 px-space-xl rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-body-md uppercase font-bold tracking-wide hover:opacity-95 active:scale-[0.98] transition-all"
+                      href="#checkout"
+                      ><span className="">Comprar Agora com Frete Grátis</span
+                      ><span className="material-symbols-outlined text-[20px]"
+                        >arrow_forward</span
+                      ></a
+                    >
+                  </div>
+                  <div
+                    className="flex items-center justify-between text-xs text-on-surface-variant flex-wrap gap-2 pt-1"
+                  >
+                    <span className="flex items-center gap-1"
+                      ><span
+                        className="material-symbols-outlined text-[15px] text-primary-container"
+                        >lock</span
+                      >
+                      Pagamento Seguro Mercado Pago</span
+                    ><span className="flex items-center gap-1"
+                      ><span
+                        className="material-symbols-outlined text-[15px] text-primary-container"
+                        >inventory_2</span
+                      >
+                      Produto Novo e Homologado</span
+                    ><span className="flex items-center gap-1"
+                      ><span
+                        className="material-symbols-outlined text-[15px] text-primary-container"
+                        >replay</span
+                      >
+                      Devolução Grátis e Fácil</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div className="lg:col-span-5 flex justify-center items-center">
+                <div
+                  className="relative w-full max-w-[440px] aspect-square rounded-2xl bg-surface-container-low border border-surface-container-high/50 p-space-md flex items-center justify-center overflow-hidden"
+                >
+                  <img
+                    alt="Chronos Kinetic Smartwatch com pulseira milanesa e múltiplos mostradores"
+                    className="w-full h-full object-contain filter drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYza-6S8olq7EEswokOcrRCSmpNE_EeYUzyAr3YZt0e6x-8uZZf3c-aUkq7HdKkymo2Zn0JU72-nNJOUQGlKVNaRVa7FHIxfiSc9LRCwzb7wDwwdvSsHUGtYUUcBqBgzaVewwBZtQlhAsE2TeRsNJ2E8u-HW-uVrVeBWLEtqIiJY4W7rzyMUbcsuAZTE-lCKYOkFze5PWOsRbtMpI0cSgZJbEQdgs56U-FCfCHz_X7vnHx0tEMLROyxTIZ8fcpMt-g4Q"
+                  />
+                  <div
+                    className="absolute bottom-3 left-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px- space-sm py-2 rounded-lg border border-surface-container-high/40 flex items-center justify-between text-xs"
+                  >
+                    <span
+                      className="text-on-surface font-medium flex items-center gap-1.5"
+                      ><span
+                        className="w-2 h-2 rounded-full bg-primary-container"
+                      ></span>
+                      Tela AMOLED 1.39"</span
+                    ><span className="text-on-surface-variant font-label-numeric"
+                      >Compatível iOS &amp; Android</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section
+          className="w-full py-space-3xl bg-surface-container-lowest"
+          id="recursos"
+        >
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col gap-space-2xl"
+          >
+            <div
+              className="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-xs"
+            >
+              <span
+                className="text-label-badge font-label-badge uppercase text-primary tracking-widest"
+                >CONEXÃO DIRETA NO DIA A DIA</span
+              >
+              <h2
+                className="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface tracking-tight uppercase"
+              >
+                Feito para facilitar a sua rotina real
+              </h2>
+              <p className="text-body-md font-body-md text-on-surface-variant">
+                Sem precisar pegar o smartphone a cada aviso. Controle chamadas,
+                compromissos e mensagens discretamente no pulso.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter-lg">
+              <div
+                className="bg-surface-container-low border border-surface-container-high/50 rounded-2xl overflow-hidden flex flex-col"
+              >
+                <div
+                  className="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden"
+                >
+                  <img
+                    alt="Smartwatch Chronos realizando chamada bluetooth com áudio cristalino"
+                    className="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsgtELF_6oiSLiB5tndWeqZAFXyxkkQlV5UoUCPEitRYDVLT9yAORrLtOeH9foeZqJpYUy3-JtBrsfNUKs8kwfrOW2DxH3MlCpJd8EHkz9KZQdrCiy4gSK3KpitvKyA83iolC2ZvFflLHXCQCbnRbFH6w6VFkf_0J7OlbqJYzaOpvgt9zdroRWoL7BszOwITSfYAcYwZj9lidAqQUEiIxd25UWulfRDZqw8ndDu1nEwMnsumtEZRv75awwNHLIeT9ROw"
+                  />
+                  <div
+                    className="absolute top-3 left-3 bg-surface-container-lowest/85 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-on-surface border border-surface-container-high/40 flex items-center gap-1.5"
+                  >
+                    <span
+                      className="material-symbols-outlined text-primary-container text-[16px]"
+                      >call</span
+                    >
+                    Viva-Voz Integrado HD
+                  </div>
+                </div>
+                <div
+                  className="p-space-lg flex flex-col gap-space-sm flex-1 justify-between"
+                >
+                  <div>
+                    <h3
+                      className="text-headline-sm font-headline-sm text-on-surface mb-1"
+                    >
+                      Atenda e Faça Chamadas com Liberdade
+                    </h3>
+                    <p
+                      className="text-body-sm font-body-sm text-on-surface-variant leading-relaxed"
+                    >
+                      Equipado com microfone de cancelamento acústico e
+                      alto-falante nítido. Fale durante a direção, corrida ou
+                      tarefas de trabalho com um toque na tela.
+                    </p>
+                  </div>
+                  <div
+                    className="grid grid-cols-3 gap-space-sm pt-space-xs border-t border-surface-container-high/40 text-center"
+                  >
+                    <div className="p-2 bg-surface-container rounded-lg">
+                      <p className="text-xs font-semibold text-on-surface">
+                        Bluetooth 5.3
+                      </p>
+                      <p className="text-label-micro text-on-surface-variant">
+                        Conexão sem cortes
+                      </p>
+                    </div>
+                    <div className="p-2 bg-surface-container rounded-lg">
+                      <p className="text-xs font-semibold text-on-surface">
+                        Teclado Numérico
+                      </p>
+                      <p className="text-label-micro text-on-surface-variant">
+                        Disque direto
+                      </p>
+                    </div>
+                    <div className="p-2 bg-surface-container rounded-lg">
+                      <p className="text-xs font-semibold text-on-surface">
+                        Assistente de Voz
+                      </p>
+                      <p className="text-label-micro text-on-surface-variant">
+                        Siri &amp; Google
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="bg-surface-container-low border border-surface-container-high/50 rounded-2xl overflow-hidden flex flex-col"
+              >
+                <div
+                  className="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden"
+                >
+                  <img
+                    alt="Recebimento de notificações inteligentes WhatsApp e redes sociais no relógio"
+                    className="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOW3cJwVrTOgM4YXLd3NQionCUomdfxDFBB1U_qzZj-x2c5AQGMRRJ2m2lQBzrInsN7531vNeu5lQkDN88HydMkoVgXu_0mghPGUl1iEWjVguix-LyRMJP8niZW-anWSRxqjsdRLfFBc9qtgdgdLGb6US4kkZJPFhASyOWL1rvvtuMuXLg_DkhAb9ecdWYFkcfuozCiJ2uG_Ydu6y5oMwT9hf3guoYGx8OSSoTNrNp2AKqAMkqnEAwX9CbYTH3yVL-fw"
+                  />
+                  <div
+                    className="absolute top-3 left-3 bg-surface-container-lowest/85 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-on-surface border border-surface-container-high/40 flex items-center gap-1.5"
+                  >
+                    <span
+                      className="material-symbols-outlined text-primary-container text-[16px]"
+                      >notifications</span
+                    >
+                    Mensagens Imediatas
+                  </div>
+                </div>
+                <div
+                  className="p-space-lg flex flex-col gap-space-sm flex-1 justify-between"
+                >
+                  <div>
+                    <h3
+                      className="text-headline-sm font-headline-sm text-on-surface mb-1"
+                    >
+                      Notificações em Português sem Falhas
+                    </h3>
+                    <p
+                      className="text-body-sm font-body-sm text-on-surface-variant leading-relaxed"
+                    >
+                      Leia mensagens completas do WhatsApp, direct do Instagram,
+                      SMS, alertas de bancos e e-mails com vibração precisa e
+                      discreta.
+                    </p>
+                  </div>
+                  <div
+                    className="flex flex-wrap gap-1.5 pt-space-xs border-t border-surface-container-high/40"
+                  >
+                    <span
+                      className="text-xs bg-surface-container px-2.5 py-1 rounded text-on-surface font-medium"
+                      >WhatsApp</span
+                    ><span
+                      className="text-xs bg-surface-container px-2.5 py-1 rounded text-on-surface font-medium"
+                      >Instagram</span
+                    ><span
+                      className="text-xs bg-surface-container px-2.5 py-1 rounded text-on-surface font-medium"
+                      >Nubank / Bancos</span
+                    ><span
+                      className="text-xs bg-surface-container px-2.5 py-1 rounded text-on-surface font-medium"
+                      >Gmail</span
+                    ><span
+                      className="text-xs bg-surface-container px-2.5 py-1 rounded text-on-surface font-medium"
+                      >Uber</span
+                    ><span
+                      className="text-xs bg-surface-container px-2.5 py-1 rounded text-on-surface font-medium"
+                      >Telegram</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section className="w-full py-space-3xl bg-surface" id="saude-bem-estar">
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col gap-space-2xl"
+          >
+            <div
+              className="flex flex-col md:flex-row md:items-end justify-between gap-space-md"
+            >
+              <div className="flex flex-col gap-space-xs max-w-xl">
+                <span
+                  className="text-label-badge font-label-badge uppercase text-primary-container tracking-widest"
+                >
+                  BIOMETRIA MÉDICA CONTINUA
+                </span>
+                <h2
+                  className="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface tracking-tight uppercase"
+                >
+                  Seu Laboratório de Saúde Particular 24h
+                </h2>
+                <p className="text-body-md font-body-md text-on-surface-variant">
+                  Sensores fotopletismográficos ópticos de espectro quádruplo
+                  monitoram constantemente suas variáveis biológicas vitais com
+                  precisão clínica.
+                </p>
+              </div>
+              
+              <div
+                className="flex items-center gap-space-md bg-surface-container-low p-space-md rounded-2xl shadow-md"
+              >
+                <div
+                  className="relative w-12 h-12 flex items-center justify-center"
+                >
+                  <span
+                    className="absolute inset-0 rounded-full bg-error-container/30 animate-ping"
+                  ></span>
+                  <span
+                    className="material-symbols-outlined text-tertiary-fixed-dim text-[28px]"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                    >cardiology</span
+                  >
+                </div>
+                <div>
+                  <p
+                    className="text-label-micro font-label-micro text-on-surface-variant uppercase"
+                  >
+                    Eletrocardio e Ritmo
+                  </p>
+                  <p
+                    className="text-label-numeric font-label-numeric text-primary-container font-bold"
+                  >
+                    Sensor Dual PPG 24/7 Ativo
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter-sm"
+            >
+              
+              <div
+                className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all"
+              >
+                <div className="flex items-center justify-between">
+                  <span
+                    className="material-symbols-outlined text-tertiary-fixed-dim text-[32px]"
+                    >favorite</span
+                  >
+                  <span
+                    className="text-label-micro font-label-micro bg-surface-container-high px-space-xs py-0.5 rounded text-on-surface-variant uppercase"
+                    >Cardio</span
+                  >
+                </div>
+                <div className="flex flex-col gap-space-xs">
+                  <h4 className="text-headline-sm font-headline-sm text-on-surface">
+                    Cardíaco Contínuo
+                  </h4>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Alertas proativos contra taquicardia em repouso e mapeamento
+                    minucioso do esforço físico.
+                  </p>
+                </div>
+                <div className="pt-space-xs">
+                  
+                  <svg
+                    className="w-full h-8 text-error"
+                    fill="none"
+                    viewBox="0 0 100 25"
+                  >
+                    <path
+                      d="M0 12 L20 12 L25 3 L32 22 L38 8 L44 14 L50 12 L70 12 L75 5 L82 20 L88 12 L100 12"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              
+              <div
+                className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all"
+              >
+                <div className="flex items-center justify-between">
+                  <span
+                    className="material-symbols-outlined text-secondary-container text-[32px]"
+                    >blood_pressure</span
+                  >
+                  <span
+                    className="text-label-micro font-label-micro bg-surface-container-high px-space-xs py-0.5 rounded text-on-surface-variant uppercase"
+                    >SpO2 / PA</span
+                  >
+                </div>
+                <div className="flex flex-col gap-space-xs">
+                  <h4 className="text-headline-sm font-headline-sm text-on-surface">
+                    Oxímetro &amp; Pressão
+                  </h4>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Estimativa referencial de pressão arterial e saturação de
+                    oxigênio sanguíneo periférico.
+                  </p>
+                </div>
+                <div
+                  className="w-full bg-surface-container-high h-2 rounded-full overflow-hidden"
+                >
+                  <div
+                    className="bg-gradient-to-r from-secondary-container to-primary-container h-full w-[98%] rounded-full"
+                  ></div>
+                </div>
+              </div>
+              
+              <div
+                className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all"
+              >
+                <div className="flex items-center justify-between">
+                  <span
+                    className="material-symbols-outlined text-primary-container text-[32px]"
+                    >bedtime</span
+                  >
+                  <span
+                    className="text-label-micro font-label-micro bg-surface-container-high px-space-xs py-0.5 rounded text-on-surface-variant uppercase"
+                    >Sleep Lab</span
+                  >
+                </div>
+                <div className="flex flex-col gap-space-xs">
+                  <h4 className="text-headline-sm font-headline-sm text-on-surface">
+                    Monitor de Sono
+                  </h4>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Decomposição avançada entre sono REM, profundo, leve e
+                    avaliação do índice de recuperação física.
+                  </p>
+                </div>
+                <div
+                  className="flex items-center justify-between text-label-micro font-label-micro text-on-surface-variant"
+                >
+                  <span className="">REM: 2h 15m</span>
+                  <span className="text-primary-container font-bold"
+                    >Score: 94</span
+                  >
+                </div>
+              </div>
+              
+              <div
+                className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all"
+              >
+                <div className="flex items-center justify-between">
+                  <span
+                    className="material-symbols-outlined text-secondary-fixed text-[32px]"
+                    >water_drop</span
+                  >
+                  <span
+                    className="text-label-micro font-label-micro bg-surface-container-high px-space-xs py-0.5 rounded text-on-surface-variant uppercase"
+                    >H2O</span
+                  >
+                </div>
+                <div className="flex flex-col gap-space-xs">
+                  <h4 className="text-headline-sm font-headline-sm text-on-surface">
+                    Ingestão de Água
+                  </h4>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Lembretes personalizados com intervalos programáveis para
+                    você nunca negligenciar sua hidratação.
+                  </p>
+                </div>
+                <div
+                  className="text-label-micro font-label-micro text-secondary-fixed font-bold"
+                >
+                  Meta diária: 2.800ml
+                </div>
+              </div>
+              
+              <div
+                className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all"
+              >
+                <div className="flex items-center justify-between">
+                  <span
+                    className="material-symbols-outlined text-primary text-[32px]"
+                    >pill</span
+                  >
+                  <span
+                    className="text-label-micro font-label-micro bg-surface-container-high px-space-xs py-0.5 rounded text-on-surface-variant uppercase"
+                    >Rotina</span
+                  >
+                </div>
+                <div className="flex flex-col gap-space-xs">
+                  <h4 className="text-headline-sm font-headline-sm text-on-surface">
+                    Alertas de Remédios
+                  </h4>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Alarmes com vibração discreta para remédios, suplementos e
+                    pausa para postura ergonômica.
+                  </p>
+                </div>
+                <div
+                  className="text-label-micro font-label-micro text-primary-container font-semibold"
+                >
+                  Zero doses esquecidas
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section className="w-full py-space-3xl bg-surface-container-lowest">
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col gap-space-2xl"
+          >
+            <div
+              className="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-xs"
+            >
+              <span
+                className="text-label-badge font-label-badge uppercase text-primary tracking-widest"
+                >PERSONALIZAÇÃO ILIMITADA</span
+              >
+              <h2
+                className="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface tracking-tight uppercase"
+              >
+                Centenas de Mostradores ou Sua Própria Foto
+              </h2>
+              <p className="text-body-md font-body-md text-on-surface-variant">
+                Troque o estilo do seu mostrador pelo aplicativo gratuito com
+                poucos cliques, ou defina imagens especiais da sua galeria.
+              </p>
+            </div>
+            <div
+              className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center"
+            >
+              <div
+                className="lg:col-span-7 rounded-2xl overflow-hidden bg-surface-container-low border border-surface-container-high/50 p-space-sm flex items-center justify-center"
+              >
+                <img
+                  alt="Galeria de mostradores personalizáveis do Chronos Kinetic"
+                  className="w-full h-auto object-cover rounded-xl"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_y0h1crm-W42y14JAQpZRTJkuPPCZ3LE5V585QjW3nYaW2pxRWr7ozpdAEJ8rFsC-t2CtC0x0yB9J-6YPX4-Axmlq8DyjQ65wPyYGgEyaM7ZbzO0CpxiRcBloTnD2cvjBhWBaFgxi1MEh9U8fF4QpV0WUxo7XIXRydxFJAeOMOBmjF2zFcucdW3XlA2cfRS-OHEKRemaLnRMLlqAVZKUJsYsAUyIeuF9nC3YFt0_vEAyZZxV2TB0FF75FvQW_j5gMjw"
+                />
+              </div>
+              <div className="lg:col-span-5 flex flex-col gap-space-md">
+                <div
+                  className="flex flex-col gap-1.5 bg-surface-container-low p-space-md rounded-xl border border-surface-container-high/40"
+                >
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="material-symbols-outlined text-primary-container text-[22px]"
+                      >collections</span
+                    >
+                    <h4
+                      className="text-headline-sm font-headline-sm text-on-surface"
+                    >
+                      Mais de 100 Mostradores Gratuitos
+                    </h4>
+                  </div>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Estilos esportivos, clássicos mecânicos e minimalistas com
+                    download direto pelo aplicativo em português.
+                  </p>
+                </div>
+                <div
+                  className="flex flex-col gap-1.5 bg-surface-container-low p-space-md rounded-xl border border-surface-container-high/40"
+                >
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="material-symbols-outlined text-primary-container text-[22px]"
+                      >photo_camera</span
+                    >
+                    <h4
+                      className="text-headline-sm font-headline-sm text-on-surface"
+                    >
+                      Foto de Fundo Personalizada
+                    </h4>
+                  </div>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Defina fotos da família, viagens ou momentos especiais como
+                    papel de parede permanente do mostrador.
+                  </p>
+                </div>
+                <div
+                  className="flex flex-col gap-1.5 bg-surface-container-low p-space-md rounded-xl border border-surface-container-high/40"
+                >
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="material-symbols-outlined text-primary-container text-[22px]"
+                      >watch</span
+                    >
+                    <h4
+                      className="text-headline-sm font-headline-sm text-on-surface"
+                    >
+                      Kit com 2 Pulseiras Inclusas
+                    </h4>
+                  </div>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Receba a sofisticada pulseira em Aço Milanês Preto Magnético
+                    e mais uma pulseira esportiva em silicone para treinos.
+                  </p>
+                </div>
+                <div className="pt-space-xs">
+                  <a
+                    className="inline-flex items-center justify-center gap-space-sm py-3 px-space-lg rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface font-headline-sm text-body-sm uppercase transition-colors border border-surface-container-high"
+                    href="#checkout"
+                    ><span className="">Garantir Meu Kit com Desconto</span
+                    ><span className="material-symbols-outlined text-[18px]"
+                      >arrow_forward</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section className="w-full py-space-3xl bg-surface">
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col gap-space-2xl"
+          >
+            <div
+              className="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-xs"
+            >
+              <span
+                className="text-label-badge font-label-badge uppercase text-primary tracking-widest bg-surface-container px-space-md py-space-xs rounded-full"
+              >
+                CUSTOMIZAÇÃO INFINITA
+              </span>
+              <h2
+                className="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface tracking-tight uppercase"
+              >
+                Várias Opções de Mostrador de Relógio
+              </h2>
+              <p className="text-body-md font-body-md text-on-surface-variant">
+                Alterne em segundos entre ponteiros clássicos refinados para
+                reuniões formais, displays digitais cyberpunk vibrantes para
+                treinos ou coloque a foto que você mais ama no display AMOLED.
+              </p>
+            </div>
+            
+            <div
+              className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center"
+            >
+              <div
+                className="lg:col-span-7 rounded-2xl overflow-hidden bg-surface-container-low p-space-md flex items-center justify-center shadow-xl"
+              >
+                <img
+                  alt="Galeria com centenas de mostradores digitais e analógicos personalizáveis no app"
+                  className="w-full h-auto object-cover rounded-xl"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz83XP81TacxCjRerkhSSZjasPVFt-MOaLAJoOhsNf3hdWtpSnkdONxpvxMPyF-KoyQvZFRcA235Ulrgy8hK9xovZ67zrzavf-lwWXqHBYFVeqYAn8A5WTjeduP-kvrMMNWdJJQqkrui9hiKQl3qGRjVV2AkIJa-nhfUyXS0nNMgipIqLUSce-4p6PPZND_Q1dhlLu6ihjNW6Wp8wwLj3N67OXyHZw0etgLVbiNXTP8KrepVn-riQmUh66c3n_Jm7Dyg"
+                />
+              </div>
+              <div className="lg:col-span-5 flex flex-col gap-space-md">
+                <div
+                  className="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded-xl"
+                >
+                  <div className="flex items-center gap-space-sm">
+                    <span
+                      className="material-symbols-outlined text-primary-container text-[24px]"
+                      >collections</span
+                    >
+                    <h4
+                      className="text-headline-sm font-headline-sm text-on-surface"
+                    >
+                      +100 Watch Faces Gratuitas
+                    </h4>
+                  </div>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Biblioteca em constante expansão através do aplicativo
+                    oficial, sem nenhum custo extra por novos mostradores
+                    temáticos.
+                  </p>
+                </div>
+                <div
+                  className="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded-xl"
+                >
+                  <div className="flex items-center gap-space-sm">
+                    <span
+                      className="material-symbols-outlined text-secondary-container text-[24px]"
+                      >photo_camera</span
+                    >
+                    <h4
+                      className="text-headline-sm font-headline-sm text-on-surface"
+                    >
+                      Mostrador com Sua Própria Foto
+                    </h4>
+                  </div>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Selecione fotos de sua família, viagens ou momentos
+                    marcantes direto do rolo de câmera do smartphone.
+                  </p>
+                </div>
+                <div
+                  className="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded-xl"
+                >
+                  <div className="flex items-center gap-space-sm">
+                    <span
+                      className="material-symbols-outlined text-primary text-[24px]"
+                      >watch</span
+                    >
+                    <h4
+                      className="text-headline-sm font-headline-sm text-on-surface"
+                    >
+                      Pulseira de Aço Milanês &amp; Silicone
+                    </h4>
+                  </div>
+                  <p className="text-body-sm font-body-sm text-on-surface-variant">
+                    Encaixe universal rápido de 20mm compatível com dezenas de
+                    materiais e acabamentos.
+                  </p>
+                </div>
+                <a
+                  className="inline-flex items-center justify-center gap-space-sm py-space-sm px-space-lg rounded-full bg-surface-container-high text-on-surface font-headline-sm text-body-sm uppercase hover:bg-surface-container-highest transition-colors"
+                  href="#checkout"
+                >
+                  <span className="">Ver Coleção Completa na Compra</span>
+                  <span className="material-symbols-outlined text-[18px]"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section
+          className="w-full py-space-3xl bg-surface-container-lowest"
+          id="ficha-tecnica"
+        >
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col gap-space-xl"
+          >
+            <div
+              className="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-xs"
+            >
+              <span
+                className="text-label-badge font-label-badge uppercase text-secondary-container tracking-widest"
+              >
+                ENGENHARIA E CONSTRUÇÃO
+              </span>
+              <h2
+                className="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface tracking-tight uppercase"
+              >
+                Ficha Técnica &amp; Compatibilidade
+              </h2>
+              <p className="text-body-md font-body-md text-on-surface-variant">
+                Padrões industriais rigorosos para assegurar longevidade e
+                sincronização fluida com seu ecossistema.
+              </p>
+            </div>
+            
+            <div
+              className="bg-surface-container-low rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <div
+                className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-surface-container-high"
+              >
+                
+                <div
+                  className="p-space-lg lg:p-space-xl flex flex-col gap-space-md"
+                >
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Display</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-on-surface text-right"
+                      >1.39" AMOLED Retina (360x360 px) com Touchscreen
+                      2.5D</span
+                    >
+                  </div>
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Compatibilidade</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-primary-container text-right"
+                      >iOS 9.0+ &amp; Android 5.0+</span
+                    >
+                  </div>
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Versão Bluetooth</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-on-surface text-right"
+                      >Bluetooth 5.3 Low Energy + EDR Audio</span
+                    >
+                  </div>
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Bateria &amp; Autonomia</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-on-surface text-right"
+                      >Polímero de Lítio 280mAh (5 a 7 dias uso / 15 dias
+                      standby)</span
+                    >
+                  </div>
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Tempo de Recarga</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-on-surface text-right"
+                      >Aprox. 2 horas (Carregador Magnético USB Incluso)</span
+                    >
+                  </div>
+                </div>
+                
+                <div
+                  className="p-space-lg lg:p-space-xl flex flex-col gap-space-md"
+                >
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Suporte de Idiomas</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-primary text-right"
+                      >Português (Brasil), Inglês, Espanhol, Francês, Alemão,
+                      Italiano, Russo, Mandarim</span
+                    >
+                  </div>
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Resistência à Água</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-on-surface text-right"
+                      >Certificação IP67 (Respingos, suor intenso e chuva
+                      diária)</span
+                    >
+                  </div>
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Estrutura e Caixa</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-on-surface text-right"
+                      >Liga de Zinco Titânio + Polímero ABS de Alta
+                      Densidade</span
+                    >
+                  </div>
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Pulseira</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-on-surface text-right"
+                      >Aço Inoxidável Milanês Preto + Silicone Esportivo
+                      Extra</span
+                    >
+                  </div>
+                  <div className="flex items-center justify-between pb-space-sm">
+                    <span
+                      className="text-body-sm font-body-sm text-on-surface-variant"
+                      >Sensores Integrados</span
+                    >
+                    <span
+                      className="text-body-sm font-body-sm font-semibold text-on-surface text-right"
+                      >PPG Óptico Duplo, Acelerômetro Triaxial,
+                      Bio-impedância</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section className="w-full py-space-3xl bg-surface" id="garantia">
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop"
+          >
+            <div
+              className="bg-gradient-to-br from-surface-container to-surface-container-low p-space-xl lg:p-space-2xl rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-xl"
+            >
+              <div className="flex items-center gap-space-lg">
+                <div
+                  className="w-20 h-20 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0"
+                >
+                  <span
+                    className="material-symbols-outlined text-primary-container text-[48px]"
+                    >verified</span
+                  >
+                </div>
+                <div className="flex flex-col gap-space-xs">
+                  <span
+                    className="text-label-badge font-label-badge uppercase text-primary-container"
+                    >GARANTIA BLINDADA DE 30 DIAS</span
+                  >
+                  <h3
+                    className="text-headline-lg font-headline-lg text-on-surface uppercase"
+                  >
+                    Risco Zero: Teste por 1 Mês Completo
+                  </h3>
+                  <p
+                    className="text-body-md font-body-md text-on-surface-variant max-w-xl"
+                  >
+                    Use o Chronos Kinetic em seus treinos, no escritório e no
+                    sono. Se por qualquer motivo ele não superar suas
+                    expectativas, devolvemos 100% do seu valor imediatamente,
+                    sem questionamentos.
+                  </p>
+                </div>
+              </div>
+              <div
+                className="flex flex-col sm:flex-row md:flex-col gap-space-sm shrink-0 w-full md:w-auto"
+              >
+                <div
+                  className="flex items-center gap-space-sm bg-surface-container-high px-space-md py-space-sm rounded-xl"
+                >
+                  <span
+                    className="material-symbols-outlined text-primary text-[20px]"
+                    >assignment_turned_in</span
+                  >
+                  <span
+                    className="text-label-micro font-label-micro uppercase font-bold text-on-surface"
+                    >Homologação Oficial Nacional</span
+                  >
+                </div>
+                <div
+                  className="flex items-center gap-space-sm bg-surface-container-high px-space-md py-space-sm rounded-xl"
+                >
+                  <span
+                    className="material-symbols-outlined text-secondary text-[20px]"
+                    >inventory_2</span
+                  >
+                  <span
+                    className="text-label-micro font-label-micro uppercase font-bold text-on-surface"
+                    >Embalagem Lacrada Original</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section
+          className="w-full py-space-3xl bg-surface-container-lowest"
+          id="avaliacoes"
+        >
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col gap-space-2xl"
+          >
+            
+            <div
+              className="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-xs"
+            >
+              <span
+                className="text-label-badge font-label-badge uppercase text-primary tracking-widest"
+              >
+                PROVA SOCIAL VERIFICADA
+              </span>
+              <h2
+                className="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface tracking-tight uppercase"
+              >
+                Quem Usa o Chronos Recomenda
+              </h2>
+              <p className="text-body-md font-body-md text-on-surface-variant">
+                Mais de 18.000 clientes em todo o Brasil já modernizaram a
+                rotina com nossa tecnologia.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter-md">
+              <div
+                className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-md"
+              >
+                <div className="flex flex-col gap-space-sm">
+                  <div className="flex text-[#ffb800]">
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                  </div>
+                  <p className="text-body-md font-body-md text-on-surface">
+                    "A qualidade do acabamento em metal preto e a pulseira de
+                    malha milanesa surpreendem muito. Atendo ligações dirigindo
+                    perfeitamente sem tirar a mão do volante. Vale cada
+                    centavo!"
+                  </p>
+                </div>
+                <div className="flex items-center gap-space-sm pt-space-xs">
+                  <div
+                    className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-headline-sm text-primary-container"
+                  >
+                    RC
+                  </div>
+                  <div>
+                    <p
+                      className="text-label-badge font-label-badge text-on-surface"
+                    >
+                      Rodrigo Camargo
+                    </p>
+                    <p
+                      className="text-label-micro font-label-micro text-primary flex items-center gap-1"
+                    >
+                      <span className="material-symbols-outlined text-[14px]"
+                        >check_circle</span
+                      >
+                      Compra Verificada • São Paulo/SP
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-md"
+              >
+                <div className="flex flex-col gap-space-sm">
+                  <div className="flex text-[#ffb800]">
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                  </div>
+                  <p className="text-body-md font-body-md text-on-surface">
+                    "Coloquei a foto da minha filha na tela e ficou maravilhoso.
+                    A bateria durou 6 dias direto com uso frequente de
+                    notificações do WhatsApp e monitor cardíaco ligado. Entrega
+                    foi em 3 dias."
+                  </p>
+                </div>
+                <div className="flex items-center gap-space-sm pt-space-xs">
+                  <div
+                    className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-headline-sm text-secondary-container"
+                  >
+                    AL
+                  </div>
+                  <div>
+                    <p
+                      className="text-label-badge font-label-badge text-on-surface"
+                    >
+                      Amanda Lemes
+                    </p>
+                    <p
+                      className="text-label-micro font-label-micro text-primary flex items-center gap-1"
+                    >
+                      <span className="material-symbols-outlined text-[14px]"
+                        >check_circle</span
+                      >
+                      Compra Verificada • Curitiba/PR
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-md"
+              >
+                <div className="flex flex-col gap-space-sm">
+                  <div className="flex text-[#ffb800]">
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                    <span
+                      className="material-symbols-outlined text-[18px]"
+                      style={{ fontVariationSettings: "'FILL' 1" }}
+                      >star</span
+                    >
+                  </div>
+                  <p className="text-body-md font-body-md text-on-surface">
+                    "Melhor custo-benefício disparado da categoria. O pareamento
+                    com meu iPhone foi imediato e o sistema está 100% em
+                    português perfeito. As métricas de sono me ajudaram a
+                    ajustar minha rotina."
+                  </p>
+                </div>
+                <div className="flex items-center gap-space-sm pt-space-xs">
+                  <div
+                    className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-headline-sm text-primary"
+                  >
+                    FV
+                  </div>
+                  <div>
+                    <p
+                      className="text-label-badge font-label-badge text-on-surface"
+                    >
+                      Fernando Vieira
+                    </p>
+                    <p
+                      className="text-label-micro font-label-micro text-primary flex items-center gap-1"
+                    >
+                      <span className="material-symbols-outlined text-[14px]"
+                        >check_circle</span
+                      >
+                      Compra Verificada • Belo Horizonte/MG
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div
+              className="mt-space-xl flex flex-col gap-space-md max-w-3xl mx-auto w-full"
+            >
+              <h3
+                className="text-headline-lg font-headline-lg text-on-surface text-center uppercase tracking-tight mb-space-sm"
+              >
+                Perguntas Frequentes
+              </h3>
+              
+              <div className="bg-surface-container-low rounded-xl p-space-md">
+                <div
+                  className="flex items-center justify-between cursor-pointer"
+                  onclick="this.nextElementSibling.classList.toggle('hidden')"
+                >
+                  <h4 className="text-headline-sm font-headline-sm text-on-surface">
+                    O relógio funciona perfeitamente com iPhone e Android?
+                  </h4>
+                  <span className="material-symbols-outlined text-primary-container"
+                    >expand_more</span
+                  >
+                </div>
+                <p
+                  className="text-body-md font-body-md text-on-surface-variant mt-2 pt-2 border-t border-surface-container-high"
+                >
+                  Sim! O Chronos Kinetic possui total compatibilidade com iOS
+                  (iPhone 6s até o 16 Pro Max) e qualquer smartphone Android
+                  versão 5.0 ou superior via aplicativo próprio gratuito em
+                  português.
+                </p>
+              </div>
+              
+              <div className="bg-surface-container-low rounded-xl p-space-md">
+                <div
+                  className="flex items-center justify-between cursor-pointer"
+                  onclick="this.nextElementSibling.classList.toggle('hidden')"
+                >
+                  <h4 className="text-headline-sm font-headline-sm text-on-surface">
+                    Consigo falar e escutar áudio diretamente pelo relógio?
+                  </h4>
+                  <span className="material-symbols-outlined text-primary-container"
+                    >expand_more</span
+                  >
+                </div>
+                <p
+                  className="text-body-md font-body-md text-on-surface-variant mt-2 pt-2 border-t border-surface-container-high"
+                >
+                  Com certeza. Equipado com microfone anti-ruído e alto-falante
+                  estéreo HD, você atende e efetua chamadas telefônicas normais
+                  e aciona comandos de voz de assistentes virtuais.
+                </p>
+              </div>
+              
+              <div className="bg-surface-container-low rounded-xl p-space-md">
+                <div
+                  className="flex items-center justify-between cursor-pointer"
+                  onclick="this.nextElementSibling.classList.toggle('hidden')"
+                >
+                  <h4 className="text-headline-sm font-headline-sm text-on-surface">
+                    Qual é o prazo de entrega e como rastreio meu pedido?
+                  </h4>
+                  <span className="material-symbols-outlined text-primary-container"
+                    >expand_more</span
+                  >
+                </div>
+                <p
+                  className="text-body-md font-body-md text-on-surface-variant mt-2 pt-2 border-t border-surface-container-high"
+                >
+                  O envio é realizado via Correios Expresso com seguro de carga
+                  e código de rastreio enviado em até 24 horas no seu e-mail e
+                  WhatsApp. O prazo médio varia entre 3 a 7 dias úteis.
+                </p>
+              </div>
+              
+              <div className="bg-surface-container-low rounded-xl p-space-md">
+                <div
+                  className="flex items-center justify-between cursor-pointer"
+                  onclick="this.nextElementSibling.classList.toggle('hidden')"
+                >
+                  <h4 className="text-headline-sm font-headline-sm text-on-surface">
+                    Como funciona a garantia de 30 dias de satisfação?
+                  </h4>
+                  <span className="material-symbols-outlined text-primary-container"
+                    >expand_more</span
+                  >
+                </div>
+                <p
+                  className="text-body-md font-body-md text-on-surface-variant mt-2 pt-2 border-t border-surface-container-high"
+                >
+                  Após o recebimento, você tem 30 dias corridos para testar o
+                  aparelho em sua rotina. Se não gostar, basta enviar uma
+                  mensagem ao nosso suporte oficial para receber o reembolso de
+                  100% do valor pago.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section className="w-full py-space-3xl bg-surface" id="checkout">
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop"
+          >
+            <div
+              className="relative bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-space-xl lg:p-space-3xl rounded-2xl shadow-2xl text-center flex flex-col items-center gap-space-md overflow-hidden"
+            >
+              <span
+                className="text-label-badge font-label-badge uppercase text-primary-container tracking-widest bg-primary-container/10 px-space-md py-space-xs rounded-full"
+              >
+                CONDIÇÃO ESPECIAL DE LANÇAMENTO
+              </span>
+              <h2
+                className="text-display-hero-mobile md:text-display-hero font-display-hero text-on-surface uppercase tracking-tight max-w-3xl"
+              >
+                Garanta o Seu Chronos Kinetic com
+                <span className="text-primary-container">R$ 102 de Desconto</span>
+              </h2>
+              <p
+                className="text-body-xl font-body-xl text-on-surface-variant max-w-2xl"
+              >
+                Acompanha Pulseira de Aço Milanês Preta + Pulseira Esportiva de
+                Brinde + Cabo Magnético USB + Manual em Português.
+              </p>
+              <div className="flex flex-col items-center gap-space-xs my-space-sm">
+                <span
+                  className="text-body-md font-body-md text-on-surface-variant line-through font-label-numeric"
+                  >De R$ 289,00</span
+                >
+                <div className="flex items-baseline gap-space-xs">
+                  <span
+                    className="text-body-md font-body-md text-primary-container uppercase font-bold"
+                    >Por apenas</span
+                  >
+                  <span
+                    className="text-display-hero-mobile md:text-headline-xl font-display-hero text-primary-container font-extrabold"
+                    >R$ 187,00</span
+                  >
+                </div>
+                <span
+                  className="text-label-numeric font-label-numeric text-on-surface"
+                  >ou 12x de R$ 18,77 • Frete Grátis Assegurado</span
+                >
+              </div>
+              <a
+                className="inline-flex items-center justify-center gap-space-sm py-space-md px-space-2xl rounded-full bg-gradient-to-r from-primary-container via-secondary-container to-primary-container text-on-primary-container font-headline-md text-headline-sm uppercase tracking-wider font-extrabold shadow-[0_0_35px_rgba(0,245,160,0.5)] hover:scale-105 active:scale-95 transition-all w-full max-w-md"
+                href="#comprar"
+              >
+                <span className="">Finalizar Pedido com Desconto</span>
+                <span className="material-symbols-outlined text-[24px]"
+                  >shopping_cart_checkout</span
+                >
+              </a>
+              <div
+                className="flex items-center justify-center gap-space-md text-label-micro font-label-micro text-on-surface-variant flex-wrap pt-space-sm"
+              >
+                <span className="flex items-center gap-1"
+                  ><span
+                    className="material-symbols-outlined text-[16px] text-primary"
+                    >lock</span
+                  >
+                  Compra 100% Criptografada</span
+                >
+                <span className="flex items-center gap-1"
+                  ><span
+                    className="material-symbols-outlined text-[16px] text-primary"
+                    >local_shipping</span
+                  >
+                  Envio com Rastreamento</span
+                >
+                <span className="flex items-center gap-1"
+                  ><span
+                    className="material-symbols-outlined text-[16px] text-primary"
+                    >verified</span
+                  >
+                  Satisfação Garantida</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <aside
+          className="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl py-space-sm shadow-[0_-5px_25px_rgba(0,0,0,0.8)]"
+        >
+          <div
+            className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-md"
+          >
+            <div className="flex items-center gap-space-sm">
+              <div
+                className="w-10 h-10 rounded-lg bg-surface-container-high p-1 shrink-0 overflow-hidden flex items-center justify-center border border-surface-container-high/40"
+              >
+                <img
+                  alt="Chronos Kinetic"
+                  className="w-full h-full object-contain"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxgA4gub1c1TI_Jo3fPdZ9HwOC0fB1TIuSixZPB0hG2bUa4_4OSJZG_6LNFX82wa124ltntS79CHN9fSI30pkMI6abFl7effPZL7VEYTNohyZw-dZzNhK6DtCl01Ni-iWBTkM6h4SgzIZCrdP0SPbHfKJAyNZHT555exyP1887PBYwQC-0paxUov8tP0m1bNEnTOvM1Cl0FRuywHEhDZRloE-1woc73WYpmi-NAmGUQvAGlU3IzKLCkIWDDQDtXpEYHQ"
+                />
+              </div>
+              <div className="flex flex-col">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs font-bold text-on-surface uppercase"
+                    >CHRONOS KINETIC</span
+                  ><span
+                    className="hidden sm:inline-block text-[11px] bg-primary-container/10 text-primary px-1.5 py-0.5 rounded font-medium"
+                    >Edição Titânio</span
+                  >
+                </div>
+                <div className="flex items-baseline gap-1.5">
+                  <span
+                    className="text-xs text-on-surface-variant line-through hidden xs:inline"
+                    >R$ 289,00</span
+                  ><span
+                    className="text-sm md:text-base font-label-numeric font-bold text-on-surface"
+                    >R$ 187,00</span
+                  ><span
+                    className="text-xs text-primary font-medium hidden md:inline"
+                    >no Pix ou 12x de R$ 18,77</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-space-md shrink-0">
+              <div className="hidden md:flex flex-col text-right text-xs">
+                <span
+                  className="text-on-surface font-semibold flex items-center justify-end gap-1"
+                  ><span
+                    className="material-symbols-outlined text-primary text-[14px]"
+                    >local_shipping</span
+                  >
+                  Frete Grátis Brasil</span
+                ><span className="text-on-surface-variant"
+                  >Estoque nacional pronto para envio</span
+                >
+              </div>
+              <a
+                className="inline-flex items-center justify-center gap-1.5 px-space-lg py-2.5 rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-xs sm:text-body-sm uppercase font-bold tracking-wide hover:opacity-90 active:scale-95 transition-all shadow-md"
+                href="#checkout"
+                ><span className="">Comprar Agora</span
+                ><span className="material-symbols-outlined text-[16px]"
+                  >arrow_forward</span
+                ></a
+              >
+            </div>
+          </div>
+        </aside>
+      </div>
+      <script>
+        // Simple countdown ticker simulation for urgency banner
+        (function initTicker() {
+          let minutes = 17;
+          let seconds = 42;
+          const tickerEl = document.getElementById("ticker-time");
+          if (!tickerEl) return;
+
+          setInterval(function () {
+            if (seconds > 0) {
+              seconds--;
+            } else {
+              if (minutes > 0) {
+                minutes--;
+                seconds = 59;
+              } else {
+                minutes = 15;
+                seconds = 0;
+              }
+            }
+            const formatted =
+              String(minutes).padStart(2, "0") +
+              ":" +
+              String(seconds).padStart(2, "0");
+            tickerEl.textContent = formatted;
+          }, 1000);
+        })();
+      </script>
+    </main>
+    <footer className="w-full bg-surface-container-lowest text-on-surface-variant">
+      <div
+        className="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop py-space-2xl"
+      >
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-gutter-lg pb-space-2xl bg-surface-container-low/50 p-space-lg rounded-xl mb-space-2xl"
+        >
+          <div className="flex items-center gap-space-sm">
+            <span
+              className="material-symbols-outlined text-primary-container text-[28px]"
+              >lock</span
+            >
+            <div>
+              <p
+                className="text-label-badge font-label-badge text-on-surface uppercase"
+              >
+                Segurança SSL 256-Bit
+              </p>
+              <p className="text-body-sm font-body-sm text-on-surface-variant">
+                Checkout 100% Criptografado
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-space-sm">
+            <span
+              className="material-symbols-outlined text-secondary-container text-[28px]"
+              >local_shipping</span
+            >
+            <div>
+              <p
+                className="text-label-badge font-label-badge text-on-surface uppercase"
+              >
+                Entrega Assegurada
+              </p>
+              <p className="text-body-sm font-body-sm text-on-surface-variant">
+                Rastreamento em Tempo Real
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-space-sm">
+            <span
+              className="material-symbols-outlined text-primary-container text-[28px]"
+              >support_agent</span
+            >
+            <div>
+              <p
+                className="text-label-badge font-label-badge text-on-surface uppercase"
+              >
+                Suporte VIP 24h
+              </p>
+              <p className="text-body-sm font-body-sm text-on-surface-variant">
+                Atendimento Especializado
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-space-sm">
+            <span
+              className="material-symbols-outlined text-secondary-container text-[28px]"
+              >credit_card</span
+            >
+            <div>
+              <p
+                className="text-label-badge font-label-badge text-on-surface uppercase"
+              >
+                Parcelamento Flexível
+              </p>
+              <p className="text-body-sm font-body-sm text-on-surface-variant">
+                Até 12x no Cartão ou Pix
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg pb-space-xl">
+          <div className="md:col-span-5 flex flex-col gap-space-sm">
+            <div className="flex items-center gap-space-xs">
+              <span
+                className="text-headline-sm font-headline-sm text-on-surface tracking-tight uppercase"
+                >CHRONOS</span
+              ><span
+                className="text-headline-sm font-headline-sm text-primary-container uppercase font-extrabold"
+                >KINETIC</span
+              >
+            </div>
+            <p
+              className="text-body-sm font-body-sm text-on-surface-variant max-w-md"
+            >
+              Engenharia horológica suíça combinada com telemetria biométrica de
+              última geração. O ápice do desempenho, resistência em titânio
+              aeroespacial e conectividade fluida.
+            </p>
+            <div className="flex items-center gap-space-sm mt-space-sm">
+              <span
+                className="text-label-micro font-label-micro px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary"
+                >PROCESSO CERTIFICADO ISO-9001</span
+              ><span
+                className="text-label-micro font-label-micro px-space-sm py-space-xs rounded-full bg-surface-container-high text-secondary"
+                >GARANTIA DE 1 ANO</span
+              >
+            </div>
+          </div>
+          <div className="md:col-span-3 flex flex-col gap-space-xs">
+            <h4
+              className="text-label-badge font-label-badge text-on-surface uppercase tracking-wider mb-space-xs"
+            >
+              Navegação
+            </h4>
+            <a
+              className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#visao-geral"
+              >Visão Geral</a
+            ><a
+              className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#recursos"
+              >Recursos e Hardware</a
+            ><a
+              className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#saude-bem-estar"
+              >Sensores Biométricos</a
+            ><a
+              className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#ficha-tecnica"
+              >Especificações Técnicas</a
+            ><a
+              className="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#avaliacoes"
+              >Opiniões Verificadas</a
+            >
+          </div>
+          <div className="md:col-span-4 flex flex-col gap-space-xs">
+            <h4
+              className="text-label-badge font-label-badge text-on-surface uppercase tracking-wider mb-space-xs"
+            >
+              Garantia &amp; Confiança
+            </h4>
+            <p className="text-body-sm font-body-sm text-on-surface-variant">
+              Experimente o Chronos Kinetic por 30 dias. Satisfação garantida ou
+              seu dinheiro integralmente estornado sem burocracia.
+            </p>
+            <div className="flex flex-wrap gap-space-xs mt-space-sm">
+              <span
+                className="text-label-micro font-label-micro text-on-surface-variant bg-surface-container px-space-sm py-space-xs rounded"
+                >PCI COMPLIANT</span
+              ><span
+                className="text-label-micro font-label-micro text-on-surface-variant bg-surface-container px-space-sm py-space-xs rounded"
+                >GOOGLE SAFE BROWSING</span
+              ><span
+                className="text-label-micro font-label-micro text-on-surface-variant bg-surface-container px-space-sm py-space-xs rounded"
+                >ORIGINAL AUTHORIZED</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          className="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-body-sm font-body-sm text-on-surface-variant"
+        >
+          <p className="">
+            © 2025 Chronos Kinetic Technologies Inc. Todos os direitos
+            reservados.
+          </p>
+          <div className="flex items-center gap-space-md">
+            <a className="hover:text-on-surface transition-colors" href="#termos"
+              >Termos de Uso</a
+            ><a
+              className="hover:text-on-surface transition-colors"
+              href="#privacidade"
+              >Privacidade</a
+            ><a className="hover:text-on-surface transition-colors" href="#trocas"
+              >Política de Trocas</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
